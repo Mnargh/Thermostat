@@ -10,7 +10,32 @@ $(function(){
   updateStatus = function() {
     $("#Temperature").html(thermostat.currentTemperature + String.fromCharCode(176) + 'C')
     $("#Energy_Usage").html(thermostat.energyUsage)
+    switch(thermostat.energyUsage) {
+      case('High Energy Usage'):
+        $('#Temperature').css('color', 'red');
+        $('#Energy_Usage').css('color', 'red');
+      break;
+      case('Low Energy Usage'):
+        $('#Temperature').css('color', 'green');
+        $('#Energy_Usage').css('color', 'green');
+      break;
+      default:
+        $('#Temperature').css('color', 'black');
+        $('#Energy_Usage').css('color', 'black');
+    }
   }
+
+  $.get(('http://api.openweathermap.org/data/2.5/weather?q=london&appid=ffb5fcf064d018d36dbd32849e591d6d&units=metric'), function(data){
+    $("#Outside_Temperature").html(data.main.temp + String.fromCharCode(176) + 'C')
+  })
+
+
+  $('#location').change(function() {
+    var location = $('#location').val()
+    $.get(('http://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=ffb5fcf064d018d36dbd32849e591d6d&units=metric'), function(data){
+      $("#Outside_Temperature").html(data.main.temp + String.fromCharCode(176) + 'C')
+    })
+  })
 
   $("#IncreaseTemp").click(function() {
     thermostat.increaseTemp();
