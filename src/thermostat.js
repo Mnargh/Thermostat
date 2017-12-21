@@ -35,6 +35,7 @@ Thermostat.prototype.decreaseTemp = function() {
 
 Thermostat.prototype.resetTemp = function() {
   this.currentTemperature = STARTING_TEMPERATURE;
+  this._calculateEnergyUsage();
 };
 
 Thermostat.prototype.powerSavingSwitch = function() {

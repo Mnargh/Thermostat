@@ -22,6 +22,24 @@ $(function(){
     updateStatus();
   })
 
+  $("#ResetTemp").click(function(){
+    thermostat.resetTemp();
+    updateStatus();
+  })
+
+  $("#PowerSaveMode").click(function(){
+    thermostat.powerSavingSwitch();
+    if(thermostat.powersavingmode){
+      $(this).css('color', 'green');
+    }
+    else {
+      $(this).css('color', 'red');
+    }
+    updateStatus();
+  })
+
+
+
   updateStatus();
 
 })
