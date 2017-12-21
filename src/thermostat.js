@@ -38,6 +38,9 @@ Thermostat.prototype.resetTemp = function() {
 };
 
 Thermostat.prototype.powerSavingSwitch = function() {
+  if(this.currentTemperature >= 26){
+    throw new Error("Power Saving Mode cannot be turned on when temperature is above 25°C");
+  }
   this.powersavingmode ? this.powersavingmode = false : this.powersavingmode = true
 };
 

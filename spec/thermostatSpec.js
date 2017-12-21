@@ -29,7 +29,6 @@ describe("Thermostat", function() {
       thermostat.resetTemp();
       expect(thermostat.currentTemperature).toEqual(20)
     });
-
   });
 
   describe("Temperature limits", function() {
@@ -48,6 +47,12 @@ describe("Thermostat", function() {
       for (var i=1; i <= 5; i++) thermostat.increaseTemp();
       expect(function() { thermostat.increaseTemp() }).toThrowError("Maximum temperature is 25°C with Power Saving Mode on")
     });
+    it ("Power Saving Mode cannot be turned on when temperature is above 25°C", function() {
+      thermostat.powerSavingSwitch();
+      for (var i=1; i <= 6; i++) thermostat.increaseTemp();
+      expect(function() { thermostat.powerSavingSwitch() }).toThrowError("Power Saving Mode cannot be turned on when temperature is above 25°C")
+    });
+
   });
 
   describe("Power Usage Modes", function() {
