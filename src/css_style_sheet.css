@@ -1,0 +1,57 @@
+/*button {
+  position: absolute;
+  top: 50%;
+  left: 50%
+}*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+button {
+    background-color: black;
+    color: black;
+    outline-color: white;
+    text-align: center;
+    padding: 0;
+    border: none;
+    background: none;
+    /*border: 2px solid white;*/
+}
+
+.triangle {
+  display: inline-block;
+  margin: 0 0;
+  vertical-align: middle;
+}
+
+.triangle2 {
+  display: inline-block;
+  margin: 0 0;
+  vertical-align: middle;
+}
+
+.triangle-0 {
+  width: 18px;
+  height: 34px;
+  border-bottom: solid 34px red;
+  border-left: solid 18px transparent;
+  border-right: solid 18px transparent;
+}
+
+.triangle-02 {
+  width: 21px;
+  height: 37px;
+  border-bottom: solid 37px white;
+  border-left: solid 21px transparent;
+  border-right: solid 21px transparent;
+}
+
+.triangle-1 {
+  width: 20px;
+  height: 36px;
+  border-top: solid 36px white;
+  border-left: solid 20px transparent;
+  border-right: solid 20px transparent;
+}

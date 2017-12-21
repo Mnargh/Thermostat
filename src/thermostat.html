@@ -2,10 +2,16 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css_style_sheet.css">
   <script src="thermostat.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+  <style>
+  body {
+    background-color: orange
+  }
+  </style>
   <script src="jquery.js"></script>
 <div id="container" class="container">
   <div class="row">
@@ -13,8 +19,7 @@
     </div>
     <div class="col-sm-4" align="center">
       <script> var thermostat = new Thermostat </script>
-      <h3 id="Temperature"></h3>
-      <h3 id="Energy_Usage" style="color:black">Energy usage</h3>
+      <h3 id="Energy_Usage">Energy usage</h3>
       <h3 id="Outside_Temperature"></h3>
     </div>
     <div class="col-sm-4">
@@ -24,17 +29,22 @@
     <div class="col-sm-4">
     </div>
     <div class="col-sm-4" align="center">
-      <button id="IncreaseTemp" type="button">+</button>
-      <button id="DecreaseTemp" type="button">-</button>
+      <h3 style="position:absolute;top:224px;left:50%;font-family:arial-black;font-size:108px;font-color:black;-webkit-text-stroke-color: white;-webkit-text-stroke-width: 2px" id="Temperature">Temp</h3>
+      <button style="position:absolute;top:32.5%;left:35%;" id="IncreaseTemp" type="button"><div style="position:absolute" class="triangle2 triangle-02"</button>
+      <button style="position:absolute;top:38.5%;left:35%;stroke" id="DecreaseTemp" type="button"><div class="triangle triangle-1"></div></button>
       <button id="ResetTemp" type="button">Reset</button>
-      <button id="PowerSaveMode" type="button" style="color: green">Power Save Mode</button>
+      <button id="PowerSaveMode" type="button" style="color: orange">Power Save Mode</button>
       <select id="location">
         <option value="London">London</option>
         <option value="paris">Paris</option>
         <option value="berlin">Berlin</option>
         <option value="rome">Rome</option>
-        <option value="newyork">New York</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="oymyakon">Oymyakon</option>
       </select>
+      <svg height="800" width="800">
+        <circle cx="288" cy="288" r="254" stroke="white" stroke-width="8" fill="black" />
+      </svg>
     </div>
     <div class="col-sm-4">
     </div>

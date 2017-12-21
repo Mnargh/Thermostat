@@ -13,11 +13,11 @@ $(function(){
     switch(thermostat.energyUsage) {
       case('High Energy Usage'):
         $('#Temperature').css('color', 'red');
-        $('#Energy_Usage').css('color', 'red');
+        $('#Energy_Usage').css('color', 'black');
       break;
       case('Low Energy Usage'):
-        $('#Temperature').css('color', 'green');
-        $('#Energy_Usage').css('color', 'green');
+        $('#Temperature').css('color', 'grey');
+        $('#Energy_Usage').css('color', 'black');
       break;
       default:
         $('#Temperature').css('color', 'black');
@@ -55,10 +55,10 @@ $(function(){
   $("#PowerSaveMode").click(function(){
     thermostat.powerSavingSwitch();
     if(thermostat.powersavingmode){
-      $(this).css('color', 'green');
+      $(this).css('color', 'orange');
     }
     else {
-      $(this).css('color', 'red');
+      $(this).css('color', 'grey');
     }
     updateStatus();
   })
