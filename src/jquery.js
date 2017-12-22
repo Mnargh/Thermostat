@@ -16,11 +16,11 @@ $(function(){
         $('#Energy_Usage').css('color', 'black');
       break;
       case('Low Energy Usage'):
-        $('#Temperature').css('color', 'grey');
+        $('#Temperature').css('color', 'black');
         $('#Energy_Usage').css('color', 'black');
       break;
       default:
-        $('#Temperature').css('color', 'black');
+        $('#Temperature').css('color', 'orange');
         $('#Energy_Usage').css('color', 'black');
     }
   }

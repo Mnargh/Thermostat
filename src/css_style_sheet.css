@@ -9,6 +9,63 @@
 *:after {
   box-sizing: border-box;
 }
+
+html, body {
+	width: 150%;
+	height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position:absolute;
+  right:-245px;
+	/*width: 100;
+	height: 90vh;*/
+	color: #fff;
+	background: linear-gradient(271deg, #f0a640, #e6d6ba, #e15a59, #e8c920);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
 button {
     background-color: black;
     color: black;
@@ -24,12 +81,7 @@ button {
   display: inline-block;
   margin: 0 0;
   vertical-align: middle;
-}
-
-.triangle2 {
-  display: inline-block;
-  margin: 0 0;
-  vertical-align: middle;
+  border-radius: 6px
 }
 
 .triangle-0 {
@@ -38,6 +90,7 @@ button {
   border-bottom: solid 34px red;
   border-left: solid 18px transparent;
   border-right: solid 18px transparent;
+  border-radius: 6px
 }
 
 .triangle-02 {
@@ -46,6 +99,7 @@ button {
   border-bottom: solid 37px white;
   border-left: solid 21px transparent;
   border-right: solid 21px transparent;
+  border-radius: 6px
 }
 
 .triangle-1 {
@@ -54,4 +108,5 @@ button {
   border-top: solid 36px white;
   border-left: solid 20px transparent;
   border-right: solid 20px transparent;
+  border-radius: 6px
 }
