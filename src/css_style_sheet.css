@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+.curve span {
+  font: 26px MonoSpace;
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+}
+
 html, body {
 	width: 150%;
 	height: 100%;
@@ -19,7 +29,7 @@ html, body {
 
 body {
   position:absolute;
-  right:-245px;
+  right:-312px;
 	/*width: 100;
 	height: 90vh;*/
 	color: #fff;

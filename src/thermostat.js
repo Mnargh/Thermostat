@@ -7,7 +7,7 @@ const MAX_TEMP_PSM = 25;
 function Thermostat(){
   this.currentTemperature = STARTING_TEMPERATURE;
   this.powersavingmode = true;
-  this.energyUsage = "Medium Energy Usage"
+  this.energyUsage = "Medium"
 };
 
 Thermostat.prototype.increaseTemp = function() {
@@ -48,13 +48,13 @@ Thermostat.prototype.powerSavingSwitch = function() {
 Thermostat.prototype._calculateEnergyUsage = function() {
   switch (true) {
     case (this.currentTemperature <= 18 ):
-      this.energyUsage = "Low Energy Usage";
+      this.energyUsage = "Low";
       break;
     case (this.currentTemperature >= 26):
-        this.energyUsage = "High Energy Usage";
+        this.energyUsage = "High";
         break;
     default:
-      this.energyUsage = "Medium Energy Usage";
+      this.energyUsage = "Medium";
   }
 };
 

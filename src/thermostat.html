@@ -16,7 +16,8 @@
     </div>
     <div class="col-sm-4" align="center">
       <script> var thermostat = new Thermostat </script>
-      <h3 id="Energy_Usage">Energy usage</h3>
+      <h3 class="curve" id="curve">energy-usage</h3>
+      <h3 id="Energy_Usage"></h3>
       <h3 id="Outside_Temperature"></h3>
     </div>
     <div class="col-sm-4">
@@ -26,11 +27,11 @@
     <div class="col-sm-4">
     </div>
     <div class="col-sm-4" align="center">
-      <h3 style="position:absolute;top:224px;left:50%;font-family:arial-black;font-size:108px;font-color:orange;-webkit-text-stroke-color: white;-webkit-text-stroke-width: 2px" id="Temperature">Temp</h3>
+      <h3 style="position:absolute;top:224px;left:50%;font-family:arial-black;font-size:108px;font-color:black;-webkit-text-stroke-color: white;-webkit-text-stroke-width: 2px" id="Temperature">Temp</h3>
       <button style="position:absolute;top:32.5%;left:35%;" id="IncreaseTemp" type="button"><div style="position:absolute" class="triangle2 triangle-02"</button>
       <button style="position:absolute;top:38.5%;left:35%;stroke" id="DecreaseTemp" type="button"><div class="triangle triangle-1"></div></button>
-      <button id="ResetTemp" type="button">Reset</button>
-      <button id="PowerSaveMode" type="button" style="color: orange">Power Save Mode</button>
+      <button style="position:absolute;top:22%;left:80%;font-size:48px;font-family:arial-black;font-color:black;-webkit-text-stroke-color: white;-webkit-text-stroke-width: 1px" id="ResetTemp" type="button">Reset</button>
+      <button style="position:absolute;top:43.5%;left:40%;font-size:48px;font-family:arial-black;font-color:orange;color:orange;-webkit-text-stroke-color: white;-webkit-text-stroke-width: 1px" id="PowerSaveMode" type="button" style="color: orange">PSM</button>
       <select id="location">
         <option value="London">London</option>
         <option value="paris">Paris</option>

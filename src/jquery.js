@@ -7,12 +7,14 @@ $(function(){
   //   }
   // })
 
+  // $("#curve").lettering();
+
   updateStatus = function() {
     $("#Temperature").html(thermostat.currentTemperature + String.fromCharCode(176) + 'C')
     $("#Energy_Usage").html(thermostat.energyUsage)
     switch(thermostat.energyUsage) {
       case('High Energy Usage'):
-        $('#Temperature').css('color', 'red');
+        $('#Temperature').css('color', 'orange');
         $('#Energy_Usage').css('color', 'black');
       break;
       case('Low Energy Usage'):
@@ -20,7 +22,7 @@ $(function(){
         $('#Energy_Usage').css('color', 'black');
       break;
       default:
-        $('#Temperature').css('color', 'orange');
+        $('#Temperature').css('color', 'black');
         $('#Energy_Usage').css('color', 'black');
     }
   }
@@ -58,7 +60,7 @@ $(function(){
       $(this).css('color', 'orange');
     }
     else {
-      $(this).css('color', 'grey');
+      $(this).css('color', 'black');
     }
     updateStatus();
   })
